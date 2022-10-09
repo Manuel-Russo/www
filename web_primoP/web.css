@@ -1,0 +1,21 @@
+.scura{
+  background-color: brown;
+}
+
+.chiara{
+  background-color: lightyellow;
+}
+
+td{
+  width: 70px;
+  height: 70px;
+}
+
+table{
+  margin: auto;
+}
+
+.scrittona{
+  font-size: 72px;
+  color: purple;
+}

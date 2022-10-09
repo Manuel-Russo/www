@@ -1,0 +1,11 @@
+Utilizzando le librerie Bootstrap5, php e Javascript, fare un sito web su un argomento a piacere 
+con titolo in alto (Jumbotron) e una barra di navigazione orizzontale in alto 
+(navbar con tab oppure pills o quello che vi piace).
+La parte centrale è occupata da un carousel con almeno 3 immagini.
+Nella barra di navigazione in alto uno dei tre pulsanti si chiama Registrati: 
+questo fa aprire (da destra o da sinistra, come vi piace) una slide Offcanvas che contiene 
+al suo interno un form che chiede all’utente uno username (in forma di mail), una password e 
+una ripetizione di password. Il pulsante submit (che ha come scritta Registrati ora) 
+del form va verso una pagina php di nome acquisisciDati.php che dice “Benvenuto (username)!“
+Un altro pulsante della barra di navigazione si chiama Sorpresa! e 
+fa apparire nella pagina principale, al posto del Carousel, un’immagine di un tenero gattino.

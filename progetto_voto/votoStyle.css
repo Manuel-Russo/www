@@ -1,0 +1,55 @@
+.link {
+  background-color: red;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  background-color: #555;
+}
+
+.link:active {
+  background-color: black;
+}
+
+.link:visited {
+  background-color: #212529;
+}
+
+#registrati     {
+    text-align: left;
+    background-color: #212529;
+    font-size: large;
+}
+
+#registrati:hover   {
+    border-color: darkblue;
+}
+
+img  {
+    width: 900px;
+    height: 700px;
+    margin: auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#immagineGatto  {
+    margin: auto;
+    display: block;
+}
+
+#immagineCentroDestra   {
+    margin: auto;
+    display: block;
+}
