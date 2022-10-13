@@ -66,20 +66,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title" id="titoloDiFreddo"></h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <!-- Modal body -->
       <div class="modal-body" id="corpoDiFreddo">
         
       </div>
 
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+      <div class="modal-footer" id="piediDiFreddo">
+        
       </div>
 
     </div>

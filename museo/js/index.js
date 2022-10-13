@@ -4,7 +4,14 @@ function apriModal(titolo,file_associato) {
     var file_corretto = file_associato.replaceAll("*","'");
     $('#titoloDiFreddo').html("<h6>Il titolo è "+titolo_ap+" </h6>");
     $('#corpoDiFreddo').html("<img class='immagine' src='img/"+file_corretto+"'>");
+    $('#piediDiFreddo').html("<button onclick=\"acquista('"+titolo_ap+"')\" type='button' class='btn btn-success' target='_blank'>Acquista</button><button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Chiudi</button>");
     $('#freddo').modal('show');
+}
+
+function acquista(title) {
+    $.post("acquista.php", {titolo_ap:title}, result=>{
+        alert(result);
+    });
 }
 
 function controlloLatoClient()  {
