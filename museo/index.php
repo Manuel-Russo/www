@@ -4,6 +4,7 @@
     header('location:login.php');
   }
 ?>
+
 <!DOCTYPE html>
 <html lang="it" dir="ltr">
   <head>
@@ -17,9 +18,6 @@
   </head>
   <body>
     <ul class="nav nav-pills justify-content-end">
-      <!--<li class="nav-item">
-        <a class="btn btn-warning" onclick="apriModal()">Apri modal</a>
-      </li>-->
       <li class="nav-item">
         <a class="btn btn-danger" href="logout.php">Logout</a>
       </li>
@@ -30,6 +28,7 @@
           <th>Titolo Opera</th>
           <th>Immagine</th>
           <th>Acquista</th>
+          <th>Info Autore</th>
         </tr>
       </thead>
       <tbody>
@@ -50,6 +49,7 @@
               echo "<td>".$row['titolo']."</td>";
               echo "<td><img class='immagine' src='img/{$row['file_associato']}'></td>";
               echo "<td><button onclick=\"apriModal('".$titolo."','".$file_associato."')\" class='btn btn-success'> Acquista ora </button></td>";
+              echo "<td><button class='btn btn-success' id=\"info\" onclick=\"richiamoAjax()\"> Informazioni </button></td>";
               echo "</tr>"; 
             }
           }
