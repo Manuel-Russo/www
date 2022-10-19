@@ -30,28 +30,25 @@ function controlloLatoClient()  {
     return controllo;
 }
 
-function richiamoAjax()     {
-    $(document).ready(function()    {
-        $("#info").click(function()     {
-            $.ajax({    //create an ajax request to display.php
-                type: "GET",
-                url: "cercaInfoAutore.php",
-                dataType: "html",   //expect html to be returned
-                success: function(response)     {
-                    $("#corpoDiFreddo").html(response);
-                    apriInfo(response);
-                }
-            });
-        });
-    });
-}
-
-function apriInfo (autore,biografia)    {
-    var autore_spazio = autore.replaceAll("-"," ");
+function apriInfo (biografia)    {
     var biografia_apo = biografia.replaceAll("*","'");
     var biografia_spazio = biografia_apo.replaceAll("-"," ");
-    $('#titoloDiFreddo').html("<h6>L'autore è "+autore_spazio+" </h6>");
+    $('#titoloDiFreddo').html("<h6>Biografia dell'autore</h6>");
     $('#corpoDiFreddo').html(biografia_spazio);
     $('#piediDiFreddo').html("<button type='button' class='btn btn-danger' data-bs-dismiss='modal'>Chiudi</button>");
     $('#freddo').modal('show');
 }
+
+function richiamoAjax(cod_autore)     { //! funzione integrazione AJAX in POST
+    $(document).ready(function()    {
+        $.ajax({ //inizio della funzione ajax
+            type: "POST", //specifico il tipo POST della comunicazione
+            dataType: "html", //come voglio che le info ritornino
+            url: "cercaInfoAutore.php", //a che pagina voglio chiedere i dati
+            data: {codice_autore: cod_autore}, //mappa con il codice dell'autore
+            success: function(result)     { //in caso di successo entro nella funzione
+                apriInfo(result); //richiamo l'apertura del modal
+            }
+        });
+    });
+} //! fine funzione AJAX

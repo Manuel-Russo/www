@@ -45,12 +45,13 @@
               $titolo = str_replace("'", '*', $titolo);
               $file_associato = $row['file_associato'];
               $file_associato = str_replace("'", '*', $file_associato);
+              $codice_autore = $row['cod_autore'];
               echo "<tr>";
               echo "<td>".$row['titolo']."</td>";
               echo "<td><img class='immagine' src='img/{$row['file_associato']}'></td>";
               echo "<td><button onclick=\"apriModal('".$titolo."','".$file_associato."')\" class='btn btn-success'> Acquista ora </button></td>";
-              echo "<td><button class='btn btn-success' id=\"info\" onclick=\"richiamoAjax()\"> Informazioni </button></td>";
-              echo "</tr>"; 
+              echo "<td><button class='btn btn-success' id='info' onclick=\"richiamoAjax('".$codice_autore."')\"> Informazioni </button></td>";
+              echo "</tr>";
             }
           }
           catch(Exception $errore)   {
@@ -62,7 +63,7 @@
   </body>
 </html>
 
-<div class="modal" id="freddo">
+<div class="modal fade" id="freddo">
   <div class="modal-dialog">
     <div class="modal-content">
 
