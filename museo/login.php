@@ -10,18 +10,18 @@
         <title>Museo</title>
     </head>
     <body>
-        <form action="controlloLogin.php" class="w-25 m-5" method="POST" onsubmit="return controlloLatoClient()">
+        <form action="controlloLogin.php" class="w-25 m-5" method="POST" onsubmit="return controlloLatoClient()"> <!-- apro un form, che punta a controlloLogin.php con metodo post e che al submit si aspetta un return di una funzione js -->
             <div class="mb-3 mt-3">
-                <label for="user" class="form-label">Username:</label>
-                <input type="text" class="form-control" id="user" placeholder="Inserisci l'email" name="user"> <!--name per php, id per js-->
+                <label for="user" class="form-label">Username:</label> <!-- label username -->
+                <input type="text" class="form-control" id="user" placeholder="Inserisci l'email" name="user"> <!--name per php, id per js; campo per l'inserimento email-->
             </div>
             <div class="mb-3">
-                <label for="pwd" class="form-label">Password:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Inserisci la password" name="pwd">
+                <label for="pwd" class="form-label">Password:</label> <!-- label psw -->
+                <input type="password" class="form-control" id="pwd" placeholder="Inserisci la password" name="pwd"> <!-- campo per la psw -->
             </div>
-            <button type="submit" class="btn btn-primary">Entra</button>
+            <button type="submit" class="btn btn-primary">Entra</button> <!-- bottone per il submit che avvia il controllo -->
         </form>
-        <div id='Freddi' class='w-25 m-5'>
+        <div id='div_login' class='w-25 m-5'> <!-- div per possibili errori -->
             
         </div>
     </body>
