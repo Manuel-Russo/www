@@ -8,6 +8,7 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0 ) {
             header('location: index.php');
+            $_SESSION['verificata'] = 'ok';
         }
         else {
             header('location: login.php');
