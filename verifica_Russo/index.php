@@ -45,7 +45,7 @@
                   $result = $conn->query($sql);
                   $numero = $_POST['numero'];
                   $cont=1;
-                  while ($row = $result->fetch_assoc()) {
+                  while ($row = $result->fetch_assoc())   {
                     $den = $row['denominazione'];
                     $crediti = $row['crediti'];
                     $id = "risultato".$cont;
