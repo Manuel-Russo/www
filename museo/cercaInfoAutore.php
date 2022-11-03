@@ -1,8 +1,4 @@
 <?php //inizio dialogo con il server
-  session_start(); //cotrollo sessione
-  if (!isset($_SESSION['stato']))  {
-    header('location:login.php');
-  }
   $cod_autore = $_POST['codice_autore']; //ricevo in post dalla funzione ajax il codice autore che mi permette di capire le bio corrispondente
   try   {
     $conn = new mysqli("localhost","root","gardone","museo"); //avvio connsesione db 
