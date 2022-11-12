@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if(!isset($_SESSION['verificata']))  {
+  if(!isset($_SESSION['id_user']))  {
     header('location:login.php');
   }
 ?>
@@ -41,7 +41,7 @@
               <?php
                 try {
                   $conn = new mysqli("localhost","root","gardone","universita");
-                  $sql = "SELECT * FROM corso";
+                  $sql = "SELECT denominazione,valutazione,data_esame FROM esame,corso WHERE corso.id=esame.esame_di AND sostenuto_da=\"{$_SESSION['id_user']}\"";
                   $result = $conn->query($sql);
                   $numero = $_POST['numero'];
                   $cont=1;

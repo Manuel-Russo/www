@@ -7,8 +7,10 @@
         $sql = "SELECT * FROM persona WHERE username = '$utenza' AND password = '$psw'";
         $result = $conn->query($sql);
         if ($result->num_rows > 0 ) {
+            $row = $result->fetch_assoc();
+            $_SESSION['id_user'] = $row['id'];
+            $_SESSION['nome_cognome'] = $row['nome']." ".$row['cognome'];
             header('location: index.php');
-            $_SESSION['verificata'] = 'ok';
         }
         else {
             header('location: login.php');
