@@ -43,7 +43,7 @@
             <tbody>
               <?php
                 $conn=new mysqli("localhost","root","gardone","universita");
-                $sql="SELECT denominazione,valutazione,data_esame FROM esame,corso WHERE corso.id=esame.esame_di AND sostenuto_da=\"{$_SESSION['id_user']}\"";
+                $sql="SELECT * FROM corso";
                 $result=$conn->query($sql);
                 while ($row=$result->fetch_assoc()) {
                   $data_iniziale = $row['data_esame'];

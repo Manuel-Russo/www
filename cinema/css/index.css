@@ -1,0 +1,15 @@
+#login_body{
+	background-image:url('../img/cinema.jpg');
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#posti_sala1 td{
+  width: 3em;
+  height: 3em;
+  border:1px solid black;
+}
+#posti_sala1{
+  border-collapse: collapse;
+}
