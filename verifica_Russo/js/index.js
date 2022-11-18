@@ -15,7 +15,7 @@ function controlloCampi()   {
 }
 
 function richiamoAjax(numero) {
-    $.post("tenta.php",{},result=>{
+    $.post("tenta.php",{id_corso:numero},result=>{ //! oggetto JS
         $('#'+numero).html(result);
         if (result >= 18) {
             $('#'+numero).css('background-color', 'green');

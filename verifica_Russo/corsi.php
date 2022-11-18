@@ -36,24 +36,23 @@
             <thead class="table-info">
               <tr>
                 <th>Nome corso</th>
-                <th>Valutazione</th>
-                <th>Data esame</th>
+                <th>Numero crediti</th>
+                <th>Tenta l'esame</th>
+                <th>Risultato</th>
               </tr>
             </thead>
             <tbody>
               <?php
                 $conn=new mysqli("localhost","root","gardone","universita");
-                $sql="SELECT denominazione,valutazione,data_esame FROM esame,corso WHERE corso.id=esame.esame_di AND sostenuto_da=\"{$_SESSION['id_user']}\"";
+                $sql="SELECT * FROM corso ";
                 $result=$conn->query($sql);
                 while ($row=$result->fetch_assoc()) {
-                  $data_iniziale = $row['data_esame'];
-                  $nuova_data = date("d/m/Y", strtotime($data_iniziale));
                   echo "<tr>";
                   echo "<td>{$row['denominazione']}</td>";
-                  echo "<td>{$row['valutazione']}</td>";
-                  echo "<td>$nuova_data</td>";
+                  echo "<td>{$row['crediti']}</td>";
+                  echo "<td><button onclick=\"richiamoAjax({$row['id']})\" class='btn btn-success'>Tenta l'esame!</button></td>";
+                  echo "<td id='{$row['id']}' class='text-white'></td>";
                   echo "</tr>";
-
                 }
               ?>
             </tbody>
