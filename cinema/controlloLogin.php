@@ -6,7 +6,7 @@
         $md5_pwd=md5($_POST['pwd']);
         $sql="SELECT * FROM utente WHERE username='{$_POST['user']}' AND password='$md5_pwd'";
         $result=$conn->query($sql);
-        $row=$result->fetch_assoc();
+        $row=$result->fetch_assoc();    
         if($row!=null) {
             $_SESSION['username']=$row['username'];
             $_SESSION['nome']=$row['nome'];
@@ -18,5 +18,4 @@
         }
     } catch (\Throwable $th) {}
 ?>
- 
 

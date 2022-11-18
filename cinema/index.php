@@ -1,7 +1,7 @@
 <?php
   session_start();
   if (!isset($_SESSION['username'])) {
-    header("location:login.php");
+    header('location:login.php');
   }
 ?>
 <!DOCTYPE html>
@@ -18,11 +18,14 @@
 
     <div class="d-flex flex-row-reverse bd-highlight">
       <div class="p-2 bd-highlight"><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></div>
-      <div class="p-2 bd-highlight"><button class='btn btn-outline-success' disabled>Ciao
-        <?php 
-          echo $_SESSION['nome']." ".$_SESSION['cognome']; 
-        ?></button></div>
+      <div class="p-2 bd-highlight"><button class='btn btn-outline-success' disabled>
+        <?php
+          echo "Ciao ".$_SESSION['nome']." ".$_SESSION['cognome'];
+        ?>
+      </button></div>
     </div>
+    
+    
     <div class="container h-100">
       <h1>Sala 1 - House of Gucci</h1>
       <div class="row">
@@ -33,39 +36,17 @@
         <div class="col-md-9">
           <table id="posti_sala1" class="text-center align-middle">
             <tbody>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
-              <tr>
-                <td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td><td class='posto'></td>
-              </tr>
+              <?php
+              $cont = 0;
+                for ($i=0; $i < 11; $i++) { 
+                  echo "<tr>";
+                  for ($j=0; $j < 20; $j++) { 
+                    echo "<td id='".$cont."'class='posto'>";
+                    $cont++;
+                  }
+                  echo "</td>";
+                }
+              ?>
               <tr>
                 <td colspan="20" style="border-left-color:white;border-right-color:white"></td>
               </tr>
@@ -80,7 +61,7 @@
   </body>
 </html>
 
-<div class="modal fade" id="myModal">
+<div class="modal" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -91,7 +72,7 @@
         Modal body..
       </div>
       <div class="modal-footer" id="modal_footer">
-
+        
       </div>
     </div>
   </div>
