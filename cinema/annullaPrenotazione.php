@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (!isset($_SESSION['username'])) {
+        header('location:login.php');
+    }
     $utente_prenotante=$_SESSION['username'];
     $riga=$_POST['r'];
     $colonna=$_POST['c'];

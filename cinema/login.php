@@ -12,7 +12,7 @@
     <div class="container-fluid text-center">
       <div class="row justify-content-md-center">
         <div class="w-50 bg-secondary">
-          <form action="controlloLogin.php" method="post">
+          <form action="controlloLogin.php" method="post" onsubmit="return controlloLogin()">
             <div class="mb-3 mt-3 display-1 bg-danger text-white">
               C I N E M A
             </div>
@@ -28,6 +28,9 @@
               <input style="font-size:1.5em" type="submit" class="form-control text-center btn-danger" value="ENTRA">
             </div>
           </form>
+          <div class="mb-3">
+            <a href='registrazione.php'> <button style="font-size:1.5em" class="text-center btn-danger">REGISTRATI</button></a>
+          </div>
         </div>
       </div>
     </div>

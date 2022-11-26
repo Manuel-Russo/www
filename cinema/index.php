@@ -4,6 +4,7 @@
     header('location:login.php');
   }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
       <div class="p-2 bd-highlight"><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></div>
       <div class="p-2 bd-highlight"><button class='btn btn-outline-success' disabled>
         <?php
-          echo "Ciao ".$_SESSION['nome']." ".$_SESSION['cognome'];
+          echo $_SESSION['nome']." ".$_SESSION['cognome'];
         ?>
       </button></div>
     </div>
@@ -37,11 +38,11 @@
           <table id="posti_sala1" class="text-center align-middle">
             <tbody>
               <?php
-              $cont = 0;
+                $cont = 0;
                 for ($i=0; $i < 11; $i++) { 
                   echo "<tr>";
                   for ($j=0; $j < 20; $j++) { 
-                    echo "<td id='".$cont."'class='posto'>";
+                    echo "<td id='".$cont."' class='posto'>";
                     $cont++;
                   }
                   echo "</td>";
