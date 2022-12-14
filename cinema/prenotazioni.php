@@ -6,15 +6,15 @@
     $utente_prenotante=$_SESSION['username'];
     $riga=$_POST['r'];
     $colonna=$_POST['c'];
-    $sql="INSERT INTO prenotazioni(riga,colonna,sala,film,prenotante) VALUES ($riga,$colonna,1,1,'$utente_prenotante')";
+    $sql="INSERT INTO prenotazioni(riga,colonna,sala,film,prenotante) VALUES ($riga,$colonna,1,1,'$utente_prenotante')"; //inserisco una nuova riga nella tabella con la prenotazione
     include "dati_connessione.php";
     $conn=new mysqli($server,$user,$password,$db);
     $result=$conn->query($sql);
-    if($result===TRUE)  {
-        echo "tuttook";
+    if($result===TRUE)  { //se il db mi risponde con true
+        echo "tuttook"; //stampo
     }
     else    {
-        echo "oops";
+        echo "oops"; //altrimenti stampo
     }
-    $conn->close();
+    $conn->close(); //chiudo
 ?>
