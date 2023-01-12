@@ -2,7 +2,7 @@ $(document).ready(function(){
     scaricaPrenotazioni();
     $(".posto").click(function()    {
         $.post("checkprenotazione.php",{riga:$(this).parent().index(),colonna:$(this).index()},result=>{
-            switch(result){
+            switch(result)  {
                 case "OCCUPATO DA ME":
                     $('#modal_title').html("Prenotazione posto");
                     $('#modal_content').html("Questo posto è già stato prenotato da te.<br>Vuoi cancellare la prenotazione?<br>Fila: "+($(this).parent().index()+1)+"<br>Posto: "+($(this).index()+1));

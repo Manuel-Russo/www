@@ -1,13 +1,13 @@
 <html>
-<head>
-  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <link href="css/index.css" rel="stylesheet" type="text/css" />
-</head>
+  <head>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+  </head>
   <body id='login_body'>
     <div class="container-fluid text-center">
       <div class="row justify-content-md-center">

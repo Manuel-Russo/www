@@ -3,7 +3,7 @@
   if (!isset($_SESSION['username'])) {
     header('location:login.php');
   }
-?>
+?> 
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
       <div class="p-2 bd-highlight"><a href='logout.php'><button class='btn btn-danger'>Logout</button></a></div>
       <div class="p-2 bd-highlight"><button class='btn btn-outline-success' disabled>
         <?php
-          echo $_SESSION['nome']." ".$_SESSION['cognome'];
+          echo $_SESSION['nome']." ".$_SESSION['cognome']; //visualizzazione del nome dell'utente
         ?>
       </button></div>
     </div>
